@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git for Windows v2.55.0(5) Release Notes</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <nav>
+            <a href="#">HOMEPAGE</a>
+            <a href="#">FAQ</a>
+            <a href="#">CONTRIBUTE</a>
+            <a href="#">BUGS</a>
+            <a href="#">QUESTIONS</a>
+        </nav>
+    </header>
+    <h1>Git for Windows v2.55.0(5) Release Notes</h1>
+    <p>
+    <h3>Latest update: August 20th 2026</h3>
+    </p>
+    <main>
+        <section>
+            <fieldset>
+                <h1>Introduction</h1>
+            </fieldset>
+            <p>
+                These release notes describe issues specific to the Git for Windows release.
+                The release notes covering the history of the core git commands can be found
+                <a href="https://git-scm.com/">in the Git project</a>.
+            </p>
+            <p>
+                See <a href="http://git-scm.com/">http://git-scm.com/</a> for further details about Git including ports
+                to other operating systems.
+                Git for Windows is hosted at <a href="https://gitforwindows.org/">https://gitforwindows.org/</a>.
+            </p>
+        </section>
+
+        <section>
+            <details>
+                <summary>Known issues</summary>
+                <ul>
+                    <li>On Windows 10 before 1703, or when Developer Mode is turned off, special permissions are
+                        required when cloning repositories with symbolic links, therefore support for symbolic links is
+                        disabled by default. Use git clone -c core.symlinks=true <URL> to enable it, see details here.
+                    </li>
+                    <li>If configured to use Plink, you will have to connect with putty first and accept the host key.
+                    </li>
+                    <li>If you specify command-line options starting with a slash, POSIX-to-Windows path conversion will
+                        kick in converting e.g. "/usr/bin/bash.exe" to "C:\Program Files\Git\usr\bin\bash.exe". When
+                        that is not desired -- e.g. "--upload-pack=/opt/git/bin/git-upload-pack" or "-L/regex/" -- you
+                        need to set the environment variable MSYS_NO_PATHCONV temporarily, like so:</li>
+                    <p>MSYS_NO_PATHCONV=1 git blame -L/pathconv/ msys2_path_conv.cc</p>
+                    <p>Alternatively, you can double the first slash to avoid POSIX-to-Windows path conversion, e.g.
+                        "//usr/bin/bash.exe".</p>
+                    <li>Windows drives are normally recognized within the POSIX path as /c/path/to/dir/ where /c/ (or
+                        appropriate drive letter) is equivalent to the C:\ Windows prefix to the \path\to\dir. If this
+                        is not recognized, revert to the C:\path\to\dir Windows style.</li>
+                    <li>Git for Windows will not allow commits containing DOS-style truncated 8.3-format filenames
+                        ending with a tilde and digit, such as mydocu~1.txt. A workaround is to call git config
+                        core.protectNTFS false, which is not advised. Instead, add a rule to .gitignore to ignore the
+                        file(s), or rename the file(s).</li>
+                    <li>Many Windows programs (including the Windows Explorer) have problems with directory trees nested
+                        so deeply that the absolute path is longer than 260 characters. Therefore, Git for Windows
+                        refuses to check out such files by default. You can overrule this default by setting
+                        core.longPaths, e.g. git clone -c core.longPaths=true ....</li>
+                    <li>Some commands are not yet supported on Windows and excluded from the installation.</li>
+                </ul>
+            </details>
+            <p>
+                Should you encounter other problems, please first search
+                <a href="#">the bug tracker</a> (also look at the closed issues) and
+                <a href="#">the mailing list</a>, chances are that the problem was reported already.
+                Also make sure that you use an up to date Git for Windows version (or a
+                <a href="#">current snapshot build</a>). If it has not been reported yet, please follow
+                <a href="#">our bug reporting guidelines</a> and <a href="#">report the bug</a>.
+            </p>
+
+            <details>
+                <summary>
+                    <fieldset>Licenses</fieldset>
+                </summary>
+                <p>Git is licensed under the GNU General Public License version 2.
+                    Git for Windows is distributed with other components yet, such as Bash, zlib, curl, tcl/tk, perl,
+                    MSYS2. Each of these components is governed by their respective license.</p>
+            </details>
+
+            <details>
+                <summary>
+                    <fieldset>Changes in v2.55.0(5) since v2.55.0(4) (August 11th 2026)</fieldset>
+                </summary>
+                <p>Following the MSYS2 project, on which Git for Windows is based, Windows 8.1 support will be dropped
+                    after Git for Windows v2.55.</p>
+                <h1>New Features</h1>
+                <ul>
+                    <li>The experimental git survey command (which was never upstreamed to the core Git project) was
+                        deprecated and converted into a small shim on top of git repo structure. In the future, git repo
+                        structure should be used instead, as the git survey command will be retired eventually.</li>
+                    <li>Git for Windows' installer is now a 64-bit executable (x64 instead of 86).</li>
+                    <li>Comes with the MSYS2 runtime (Git for Windows flavor) based on Cygwin v3.6.10.</li>
+                    <li>Comes with OpenSSH v10.5.P1.</li>
+                </ul>
+                <h1>Bug Fixes</h1>
+                <ul>
+                    <li>The long-standing bug where Git Bash's screen was cleared after git.exe called vim (e.g. to edit
+                        a commit message) was fixed.</li>
+                    <li>The Bash executables in the 64-bit and ARM64 distributions no longer carry an invalid
+                        Authenticode signature.</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>
+                    <fieldset>Changes in v2.55.0(4) since v2.55.0(3) (July 14th 2026)</fieldset>
+                </summary>
+                <p>Following the MSYS2 project, on which Git for Windows is based, Windows 8.1 support will be dropped
+                    after Git for Windows v2.55.
+                    This is a security fix release, addressing CVE-2026-62960.</p>
+                <ul>
+                    <li>CVE-2026-62960, Git for Windows: Attacker-controlled servers may advertise bundle URIs that
+                        point to network shares, causing Windows to transparently perform NTLM authentication and
+                        disclose the user's NTLMv2 hash. Since NTLM hashing is weak, the captured hash can potentially
+                        be brute-forced to recover the user's credentials. This is addressed by limiting the bundle URIs
+                        that git clone respects by the same protocol.<name>.allow rules as usual, which excludes file://
+                            URIs by defaul</li>
+                </ul>
+            </details>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.box {
+    display: inline;
+  background: lightblue;
+  /* padding: 15px; */
+  /* width: 600px;
+  height: 500px; */
+  height: 300px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  background: yellow;
+}
+
+.button {
+  display: inline-block;
+  background: navy;
+  color: white;
+  padding: 10px 16px;
+  margin-right: 8px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: royalblue;
+}
+ /* flexbox */
+.container {
+    display: flex;
+    flex-direction: row;
+    background: #eeeeee;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    /* padding: 10px; */
+    height: 200px;
+    width: 600px;
+    gap: 120px;
+}
+.item {
+    background: steelblue;
+    color: white;
+    padding: 20px;
+    margin: 5px
+}

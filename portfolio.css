@@ -47,7 +47,18 @@ main {
 #section3{
     margin-top: 2em;
     margin-left: 15em;
+
 }
+
+.down-button{
+    width: 120px;
+    height:30px ;
+    border-radius:36px;
+    color: white;
+    background-color: black;
+}
+
+
 
 img{
     width: 150px;

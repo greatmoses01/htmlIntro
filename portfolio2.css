@@ -71,3 +71,12 @@ footer div ul{
     /* justify-content: space-between; */
     gap: 10px;
 }
+
+@media (min-width:320px) and (max-width:599px){
+
+    .grid-container {
+    display: block;
+    margin-left: .2em;
+
+}
+}

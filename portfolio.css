@@ -76,7 +76,7 @@ i{
     color: #4a90e2;
 }
 
-@media  (max-width:599px){
+@media (min-width:320px) and (max-width:599px){
 
 
 body{
@@ -133,3 +133,26 @@ main {
     width: 200px;
 }
 }
+
+/* for tablets */
+@media (min-width:600px) and (max-width:767px)
+{
+    
+}
+
+/* for laptops and mini desktops */
+@media (min-width:768px) and (max-width:1023px)
+{
+
+}
+/* for larger screens */
+@media (min-width:1024px)
+{
+
+}
+
+@media (orientation: portrait)
+{
+
+}
+

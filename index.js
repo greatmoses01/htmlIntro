@@ -132,7 +132,7 @@ for (let fruit of arrayOfFruits){
 // }
 // console.log(sum);
 
-const numbers = [2, 5, 8, 11, 14, 17, 20];
+// const numbers = [2, 5, 8, 11, 14, 17, 20];
 // const evenarray =[];
 
 // for (let value of numbers){
@@ -146,6 +146,32 @@ const numbers = [2, 5, 8, 11, 14, 17, 20];
 // numbers.forEach((element) => console.log(element +=3));
 
 
-numbers.forEach(function(element){
-    console.log(element);
+// numbers.forEach(function(element){
+//     console.log(element);
+// })
+
+const numbers = [2, 5, 8, 11, 14, 17, 20];
+// array map 
+const multiplier = numbers.map(function(numb){
+    return numb * 2
 })
+console.log(multiplier);
+
+const names = ["john", "mary", "peter", "grace"];
+const upperCaseNames = names.map(function(name){
+    return name.toUpperCase()
+})
+console.log(upperCaseNames)
+
+let namer = "Moses";
+console.log(namer);
+
+// function AddTwoNumbers(num1, num2){
+
+// }
+//  const age =26;
+// function multiplicator(num1, num2){
+
+// }
+
+

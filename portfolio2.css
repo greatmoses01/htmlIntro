@@ -63,9 +63,11 @@ footer{
 footer h3{
     margin-left: 1em;
 }
+
 footer h6{
     margin-left: 1em;
 }
+
 footer div ul{
     display: flex;
     /* justify-content: space-between; */

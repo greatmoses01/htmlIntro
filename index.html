@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>    
 </head>
 
 <body>
@@ -165,5 +165,46 @@
             <td>&copy;copyright 2026</td>
         </tfoot>
     </table>
+<script>
+    let items = [
+        {
+            name:"Hair dryer",
+            description:"loreme iei nfnf",
+            price:30000,
+            imgsrc:"imgsrc.png"
+        },
+        {
+            name:"clipper",
+            description:"loreme iei nfnf",
+            price:17000,
+            imgsrc:"imgsrc.png"
+        },
+        {
+            name:"Sneaker",
+            description:"loreme iei nfnf",
+            price:30000,
+            imgsrc:"imgsrc.png"
+        },
+        {
+            name:"Mouse",
+            description:"loreme iei nfnf",
+            price:3000,
+            imgsrc:"imgsrc1.png"
+        }
+    ];
+</script>
+
+    <div>
+        <img src="{{item.imgsrc}}" alt="HairDryer">
+        <h1>{{item.name}}</h1>
+        <p>{{item.description}}</p>
+        <h2>{{item.price}}</h2>
+        <button>Add to Cart</button>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
 </body>
 </html>

@@ -235,12 +235,12 @@
 // arrayTotal([1,2,3,4,5,6,7,8,9,10]);
 //  expected result = 55;
 
-let names = ["moses", "kingsley", "john","Sam","Boss"];
+// let names = ["moses", "kingsley", "john","Sam","Boss"];
 // use an array.forEach loop to greet these individuals
 // expected result = Good morning moses, Good morning kingsley, ...
-names.forEach(function(element){
-    console.log(`Good morning ${element}`)
-});
+// names.forEach(function(element){
+//     console.log(`Good morning ${element}`)
+// });
 
 // let num =[1,2,3,4,5,6,6,7];
 // let total = 0;
@@ -251,20 +251,20 @@ names.forEach(function(element){
 
 
 
-let numbers = [300,10,5,2];
-let total = 400;
-for(let i=0; i < numbers.length; i++){
-   total = total - numbers[i]
-}
-console.log(total);
+// let numbers = [300,10,5,2];
+// let total = 400;
+// for(let i=0; i < numbers.length; i++){
+//    total = total - numbers[i]
+// }
+// console.log(total);
 
 // use forEach loop to subtract elements and return the answer
 
-
+// create an employee salary management system 
 let employee = {
     name: "John Doe",   
-    basicSalary: 50000,
-    allowance: 10000,
+    basicSalary: 100000,
+    allowance: 20000,
     taxPercentage: 10
 }
 
@@ -275,15 +275,21 @@ function calculateAnnualGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
     return totalAnnualSalary + totalAnnualAllowance;
 }
 
-console.log(calculateGrossSalary(employee.basicSalary, employee.allowance));
+// console.log(calculateAnnualGrossSalary(employee.basicSalary, employee.allowance));
 
 
 function calculateGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
     return basicMonthlySalary + basicMonthlyAllowance;
 }
 
+// console.log(calculateGrossSalary(employee.basicSalary, employee.allowance))
 
 function calculateTax(grossSalary, taxPercentage){
     return grossSalary * (taxPercentage/100);
 }
-console.log(calculateTax(50000,10));
+console.log(calculateTax(175000,8));
+
+function calculateNetSalary( ){
+
+}
+console.log(calculateNetSalary(100000, 5));

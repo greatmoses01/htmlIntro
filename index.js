@@ -1,296 +1,190 @@
-// // for loop
 
-// let fruits = ["Apple", "Mango", "Orange", "Banana"];
-// for(i=0;i<fruits.length;i++){
-//     console.log(fruits[i]);
+// console.log("Hello world");
+// //alert()
+
+
+// const grade = 59;
+
+// if (grade >= 70) {
+//     console.log("You got an A");
+// }
+// else if (grade >= 60 && grade < 70) {
+//     console.log("You got a B");
+// }
+// else if (grade >= 50 && grade < 60) {
+//     console.log("You got a C");
+// }
+// else if (grade >= 45 && grade < 50) {
+//     console.log("You got a D");
+// }
+// else if (grade >= 40 && grade < 45) {
+//     console.log("You got an E");
+// }
+// else {
+//     console.log("You got an F");
 // }
 
-// // =====
-// for (i=1;i<=6;i++){
-//     console.log(i)
+// let number = 10;
+// if (number > 0) {
+//     console.log("The number is positive");
+// }
+// else {
+//     console.log("The number is negative");
 // }
 
-// // ======
-// let sum = 0;
-
-// for (let i = 1; i <= 5; i++) {
-//     sum += i;
+// let secnumber = 10;
+// if (secnumber % 2 === 0) {
+//     console.log(secnumber = "even");
 // }
-// console.log(sum);
+// else { console.log(secnumber = "odd"); }
 
-
-
-// ==============For Loop===========
-// for(let i=1;i<=5;i++){
-// console.log("I am learning JavaScript");
+// let temperature = 30;
+// if (temperature > 30) {
+//     console.log("it is a hot day");
 // }
-// for(let i=1; i<=20;i++){
-//     let j =[];
-//     if(i%2==0){
-//         j =+i;
-//         console.log(j);
-//     }
+// else {
+//     console.log("the weather is moderate");
 // }
 
-// for(let i=10; i>=1;i--){
-//     console.log(i)
-//     if(i==1){
-//         console.log('Happy man');
-//     }
+// let tetnumber = 2
+// if (tetnumber > 0) {
+//     console.log("the number is positive");
+// }
+// else if (tetnumber < 0) {
+//     console.log("the number is negative");
+// }
+// else {
+//     console.log("the number is zero");
 // }
 
-// let count = 1;
-
-// while (count <= 5) {
-//     console.log(count);
-//     count++;
+// let age = 48
+// if (age < 13) {
+//     console.log("Child")
+// }
+// else if (age >= 13 && age <= 19) {
+//     console.log("Teenager")
+// }
+// else if (age >= 20 && age <= 59) {
+//     console.log("Adult")
+// }
+// else {
+//     console.log("Senior Citizen")
 // }
 
-// // sum of numbers from 1 to 10;
-// let sum=0;
-// let number=1;
-// while(number<=10){
-//     sum += number;
-//     number++;
+// let num1 = 7;
+// let num2 = 7;
+
+// if (num1 > num2){
+//     console.log("num1 is greater than num2");
 // }
-// console.log(sum);
+// else if (num1 < num2){
+//     console.log("num2 is greater than num1");
+// }
+// else{
+//     console.log("num1 and num2 are equal");
+// }
+
+// //for loop
+// //for(initialize; condition; iterate){
+// // }?
 
 // let i=1;
-// do {
-//     console.log("uwakmfon is a boy")
-//     i++
-// } while (i<=5);
+// while (i<=10){
+//     if (i) %2 = 0;
+//     console.log(i);
+//     i += 2;
+// } break
 
-// let numb = 10;
-// do {
-//     console.log(numb);
-//     numb--;
-// } while (numb <= 1);
-
-
-// Exercises
-// while loop
-// do while loop
-
-// while (condition) {
-// //    code goes here 
+// let b=10;
+// while (b>=0){
+//     console.log(b)
+//     b--;
 // }
 
-// let numb = 1;
-// while(numb <= 10){
-//     if(numb%2==0){
-//         console.log(numb);
-//     }
-//     numb++;  
+// let current=1
+// while (current*=2){
+//     console.log(current)
+//     current===1000
 // }
 
-// let bioData = {
-//     name:"Moses",
-//     age:25,
-//     occupation:"student",
-//     regNo:"25/EG/CO/102",
+// function multiply (a, b) {
+//     return a*b
 // }
-
-
-// for(let key in bioData){
-//     if(key == "occupation"){
-//         console.log(bioData[key])
-//     }
-// }
-
-// const MosesScores = {
-//     mathematics: 80,
-//     English: 75,
-//     biology: 90,
-//     chemistry: 85
-// };
-
-// let totalScore = 0;
-// for (key in MosesScores){
-//     totalScore += MosesScores[key]
-// }
-// // console.log(`The total score is ${totalScore}`);
-
-// // console.log("Moses' final score is" , totalScore);
-// // console.log('Moses final score is ' + "");
-
-// let name ="Daniel";
-// let age = 20;
-
-// console.log("Hi, my name is " + name + ". I am " + age + " years old");
-
-// let arrayOfFruits = ['apple','paw paw','orange','banana','quava','pear'];
-// for (let fruit of arrayOfFruits){
-//     console.log(fruit);
-// }
-
-// const numbers = [10, 20, 30, 40, 50];
-// console.log(numbers);
-// let sum =0;
-// for(let value of numbers){
-//     sum = sum+value;
-// }
-// console.log(sum);
-
-// const numbers = [2, 5, 8, 11, 14, 17, 20];
-// const evenarray =[];
-
-// for (let value of numbers){
-//     if(value%2==0){
-//         // console.log(value)
-//         evenarray.push(value);
-//     }
-// }
-// console.log(evenarray)
-
-// numbers.forEach((element) => console.log(element +=3));
-
-
-// numbers.forEach(function(element){
-//     console.log(element);
-// })
-
-// const numbers = [2, 5, 8, 11, 14, 17, 20];
-// // array map 
-// const multiplier = numbers.map(function(numb){
-//     return numb * 2
-// })
-// console.log(multiplier);
-
-// const names = ["john", "mary", "peter", "grace"];
-// const upperCaseNames = names.map(function(name){
-//     return name.toUpperCase()
-// })
-// console.log(upperCaseNames)
-
-// let namer = "Moses";
-// console.log(namer);
-
-// function AddTwoNumbers(num1, num2){
-
-// }
-//  const age =26;
-// function multiplicator(num1, num2){
-
-// }
-
-// function to greet users ; Simple calculator (function addNumbers(a, b) {}) ; function checkEligibility(age) {}
-// function displayNumbers(limit) {
-//     for (let i = 1; i <= limit; i++) {
-//         console.log(i);
-//     }
-// }
-
-// displayNumbers(5);
-
-
-
-
-// function functionName(parameters) {
-//     // code to be executed
-// }
-
-// function greetUser(name) {
-//     console.log(`Hello, ${name}!`);
-// }
-
-// greetUser("moses");
-
-// function to multiply two numbers 
-
-
-// function cartTotal(array){
-//     let total = 0;
-//     array.forEach(element => {
-//         total += element;
-//     });
-//     console.log(total);
-// }
-
-// cartTotal([100, 200, 300, 400, 500]);
-
-
-
-
-
-
-
-
-
-
-
-
-// write a function that takes an array of numbers as input and
-//  returns the sum of all the numbers in the array. 
-// Use a for loop to iterate through the array and calculate the sum.
+// console.log(multiply(4,5));
 
 // function arrayTotal(array){
-//     let total = 0;
-//    array.forEach(function(element){
-//         total = total + element;
+//     array.forEach(function(element){
+
 //     })
-//     console.log(total);
 // }
 
-// arrayTotal([1,2,3,4,5,6,7,8,9,10]);
-//  expected result = 55;
 
-// let names = ["moses", "kingsley", "john","Sam","Boss"];
-// use an array.forEach loop to greet these individuals
-// expected result = Good morning moses, Good morning kingsley, ...
-// names.forEach(function(element){
-//     console.log(`Good morning ${element}`)
-// });
 
-// let num =[1,2,3,4,5,6,6,7];
+// array([1,2,3,4,5,6,7,8,9,10])
+
+// let num = [300, 10, 5, 2];
 // let total = 0;
 // num.forEach((element) => {
-//     total = total + element;
+//     total = total - element;
 // })
 // console.log(total);
 
-
-
-// let numbers = [300,10,5,2];
-// let total = 400;
-// for(let i=0; i < numbers.length; i++){
-//    total = total - numbers[i]
+// let employee = {
+//     name: "John Doe",   
+//     basicSalary: 100000,
+//     allowance: 20000,
+//     taxPercentage: 10
 // }
-// console.log(total);
 
-// use forEach loop to subtract elements and return the answer
+// function calculateAnnualGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
+//     let totalAnnualSalary  = basicMonthlySalary * 12;
+//     let totalAnnualAllowance = basicMonthlyAllowance * 12;
 
-// create an employee salary management system 
-let employee = {
-    name: "John Doe",   
-    basicSalary: 100000,
-    allowance: 20000,
-    taxPercentage: 10
+//     return totalAnnualSalary + totalAnnualAllowance;
+// }
+
+// // console.log(calculateAnnualGrossSalary(employee.basicSalary, employee.allowance));
+
+
+// function calculateGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
+//     return basicMonthlySalary + basicMonthlyAllowance;
+// }
+
+// // console.log(calculateGrossSalary(employee.basicSalary, employee.allowance))
+
+// function calculateTax(grossSalary, taxPercentage){
+//     return grossSalary * (taxPercentage/100);
+// }
+// console.log(calculateTax(175000,8));
+
+// function calculateNetSalary(grossSalary, taxPercentage){
+//     return grossSalary - (grossSalary * (taxPercentage/100))
+
+// }
+// console.log(calculateNetSalary(100000, 5))
+
+let customer  ={
+name: "John Doe",
+meterNumber: 12345,
+unitsConsumed: 105,
+costPerUnit: 100,
+serviceCharge: 150,
 }
 
-function calculateAnnualGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
-    let totalAnnualSalary  = basicMonthlySalary * 12;
-    let totalAnnualAllowance = basicMonthlyAllowance * 12;
-
-    return totalAnnualSalary + totalAnnualAllowance;
+function calculateElectricityBill (unitsConsumed, costPerUnit, serviceCharge){
+    return (unitsConsumed * costPerUnit) + serviceCharge;
 }
+ console.log(calculateElectricityBill(customer.unitsConsumed, customer.costPerUnit, customer.serviceCharge));
 
-// console.log(calculateAnnualGrossSalary(employee.basicSalary, employee.allowance));
 
 
-function calculateGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
-    return basicMonthlySalary + basicMonthlyAllowance;
-}
 
-// console.log(calculateGrossSalary(employee.basicSalary, employee.allowance))
 
-function calculateTax(grossSalary, taxPercentage){
-    return grossSalary * (taxPercentage/100);
-}
-console.log(calculateTax(175000,8));
 
-function calculateNetSalary(grossSalary, taxPercentage){
-    return grossSalary - (grossSalary * (taxPercentage/100))
 
-}
-console.log(calculateNetSalary(100000, 5))
+
+
+
+
+
+

@@ -119,10 +119,10 @@
 
 // console.log("Hi, my name is " + name + ". I am " + age + " years old");
 
-let arrayOfFruits = ['apple','paw paw','orange','banana','quava','pear'];
-for (let fruit of arrayOfFruits){
-    console.log(fruit);
-}
+// let arrayOfFruits = ['apple','paw paw','orange','banana','quava','pear'];
+// for (let fruit of arrayOfFruits){
+//     console.log(fruit);
+// }
 
 // const numbers = [10, 20, 30, 40, 50];
 // console.log(numbers);
@@ -150,21 +150,21 @@ for (let fruit of arrayOfFruits){
 //     console.log(element);
 // })
 
-const numbers = [2, 5, 8, 11, 14, 17, 20];
-// array map 
-const multiplier = numbers.map(function(numb){
-    return numb * 2
-})
-console.log(multiplier);
+// const numbers = [2, 5, 8, 11, 14, 17, 20];
+// // array map 
+// const multiplier = numbers.map(function(numb){
+//     return numb * 2
+// })
+// console.log(multiplier);
 
-const names = ["john", "mary", "peter", "grace"];
-const upperCaseNames = names.map(function(name){
-    return name.toUpperCase()
-})
-console.log(upperCaseNames)
+// const names = ["john", "mary", "peter", "grace"];
+// const upperCaseNames = names.map(function(name){
+//     return name.toUpperCase()
+// })
+// console.log(upperCaseNames)
 
-let namer = "Moses";
-console.log(namer);
+// let namer = "Moses";
+// console.log(namer);
 
 // function AddTwoNumbers(num1, num2){
 
@@ -174,4 +174,116 @@ console.log(namer);
 
 // }
 
+// function to greet users ; Simple calculator (function addNumbers(a, b) {}) ; function checkEligibility(age) {}
+// function displayNumbers(limit) {
+//     for (let i = 1; i <= limit; i++) {
+//         console.log(i);
+//     }
+// }
 
+// displayNumbers(5);
+
+
+
+
+// function functionName(parameters) {
+//     // code to be executed
+// }
+
+// function greetUser(name) {
+//     console.log(`Hello, ${name}!`);
+// }
+
+// greetUser("moses");
+
+// function to multiply two numbers 
+
+
+// function cartTotal(array){
+//     let total = 0;
+//     array.forEach(element => {
+//         total += element;
+//     });
+//     console.log(total);
+// }
+
+// cartTotal([100, 200, 300, 400, 500]);
+
+
+
+
+
+
+
+
+
+
+
+
+// write a function that takes an array of numbers as input and
+//  returns the sum of all the numbers in the array. 
+// Use a for loop to iterate through the array and calculate the sum.
+
+// function arrayTotal(array){
+//     let total = 0;
+//    array.forEach(function(element){
+//         total = total + element;
+//     })
+//     console.log(total);
+// }
+
+// arrayTotal([1,2,3,4,5,6,7,8,9,10]);
+//  expected result = 55;
+
+let names = ["moses", "kingsley", "john","Sam","Boss"];
+// use an array.forEach loop to greet these individuals
+// expected result = Good morning moses, Good morning kingsley, ...
+names.forEach(function(element){
+    console.log(`Good morning ${element}`)
+});
+
+// let num =[1,2,3,4,5,6,6,7];
+// let total = 0;
+// num.forEach((element) => {
+//     total = total + element;
+// })
+// console.log(total);
+
+
+
+let numbers = [300,10,5,2];
+let total = 400;
+for(let i=0; i < numbers.length; i++){
+   total = total - numbers[i]
+}
+console.log(total);
+
+// use forEach loop to subtract elements and return the answer
+
+
+let employee = {
+    name: "John Doe",   
+    basicSalary: 50000,
+    allowance: 10000,
+    taxPercentage: 10
+}
+
+function calculateAnnualGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
+    let totalAnnualSalary  = basicMonthlySalary * 12;
+    let totalAnnualAllowance = basicMonthlyAllowance * 12;
+
+    return totalAnnualSalary + totalAnnualAllowance;
+}
+
+console.log(calculateGrossSalary(employee.basicSalary, employee.allowance));
+
+
+function calculateGrossSalary(basicMonthlySalary, basicMonthlyAllowance){
+    return basicMonthlySalary + basicMonthlyAllowance;
+}
+
+
+function calculateTax(grossSalary, taxPercentage){
+    return grossSalary * (taxPercentage/100);
+}
+console.log(calculateTax(50000,10));

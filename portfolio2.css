@@ -68,53 +68,21 @@ footer h3 {
     margin-left: 1em;
 }
 
-footer h6 {
+footer h6{
     margin-left: 1em;
 }
 
-footer div ul {
+footer div ul{
     display: flex;
     /* justify-content: space-between; */
     gap: 10px;
 }
 
-@media (min-width:320px) and (max-width:499px) {
-    h1 {
-        font-size: 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 600;
-    }
+@media (min-width:320px) and (max-width:599px){
 
-    header {
-        /* margin: 0.5?em; */
-        background-color:white;
-        nav ul{
-            display:block;
-        }
-    }
+    .grid-container {
+    display: block;
+    margin-left: .2em;
 
-    #avatar {
-        display: inline;
-        width: 30px;
-        height: 30px;
-    }
-
-    body {
-        background-color: rgb(243, 232, 77);
-    }
-
-    .grid-container{
-        display: block;
-    }
-
-    footer{
-        background-color: white;
-
-        div ul{
-            display: block;
-
-        }
-    }
-    
-
+}
 }

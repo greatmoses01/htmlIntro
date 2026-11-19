@@ -289,7 +289,8 @@ function calculateTax(grossSalary, taxPercentage){
 }
 console.log(calculateTax(175000,8));
 
-function calculateNetSalary( ){
+function calculateNetSalary(grossSalary, taxPercentage){
+    return grossSalary - (grossSalary * (taxPercentage/100))
 
 }
-console.log(calculateNetSalary(100000, 5));
+console.log(calculateNetSalary(100000, 5))

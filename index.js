@@ -294,3 +294,20 @@ function calculateNetSalary(grossSalary, taxPercentage){
 
 }
 console.log(calculateNetSalary(100000, 5))
+
+
+/**
+ * Electricity bill calculator
+ *  let customer [customerName, meterNumber, unitsConsumed, costPerUnit, serviceCharge]
+ * 
+ * Create a function called "calculateElectricityBill" that accepts the customer's units 
+ * consumed, cost per unit and service charge.
+ * 
+ * Calculate the total electricity cost.
+ * 
+ * Add the service charge.
+ * 
+ * Return the final bill amount.
+ * 
+ * 
+ */ 

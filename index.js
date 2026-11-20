@@ -163,28 +163,95 @@
 // }
 // console.log(calculateNetSalary(100000, 5))
 
-let customer  ={
-name: "John Doe",
-meterNumber: 12345,
-unitsConsumed: 105,
-costPerUnit: 100,
-serviceCharge: 150,
+let customer = {
+    name: "John Doe",
+    meterNumber: 12345,
+    unitsConsumed: 105,
+    costPerUnit: 100,
+    serviceCharge: 150,
 }
 
-function calculateElectricityBill (unitsConsumed, costPerUnit, serviceCharge){
+function calculateElectricityBill(unitsConsumed, costPerUnit, serviceCharge) {
     return (unitsConsumed * costPerUnit) + serviceCharge;
 }
- console.log(calculateElectricityBill(customer.unitsConsumed, customer.costPerUnit, customer.serviceCharge));
+console.log(calculateElectricityBill(customer.unitsConsumed, customer.costPerUnit, customer.serviceCharge));
+
+// QUES 1: ORDER
+let order = {
+    name: "ada",
+    meal: "jollofRice",
+    quantity: 3,
+    pricePerMeal: 2500,
+    deliveryFee: 1000,
+}
+function calculateOrderTotal(quantity, pricePerMeal, deliveryFee) {
+    return (quantity * pricePerMeal) + deliveryFee;
+}
+console.log(calculateOrderTotal(order.quantity, order.pricePerMeal, order.deliveryFee));
+
+// QUES 2: BOOKING
+let booking = {
+    name: "samuel",
+    movieTitle: "theLastJourney",
+    numberOfTickets: 4,
+    pricePerTicket: 3000,
+    bookingFee: 500,
+}
+
+function calculateTicketCost(numberOfTickets, pricePerTicket, bookingFee) {
+    return (numberOfTickets * pricePerTicket) + bookingFee;
+}
+console.log(calculateTicketCost(booking.numberOfTickets, booking.pricePerTicket, booking.bookingFee));
+
+
+// QUES 3: DATA PURCHASE
+let dataPurchase = {
+    name: "grace",
+    dataPlan: "10gb",
+    planPrice: 5000,
+    discountPercentage: 10,
+}
+
+function calculateDiscountedPrice(planPrice, discountPercentage) {
+    return planPrice - (planPrice * (discountPercentage / 100));
+}
+console.log(calculateDiscountedPrice(dataPurchase.planPrice, dataPurchase.discountPercentage));
+
+
+// QUES 4: DELIVERY
+let delivery = {
+    name: "michael",
+    destination: "uyo",
+    distance: 12,
+    costPerKilometre: 150,
+    handlingFee: 800,
+}
+
+function calculateDeliveryFee(distance, costPerKilometre, handlingFee) {
+    return (distance * costPerKilometre) + handlingFee;
+}
+console.log(calculateDeliveryFee(delivery.distance, delivery.costPerKilometre, delivery.handlingFee));
 
 
 
 
 
+// QUES 5: Registration 
+let registration = {
+    organisation: "brightFutureClub",
+    numberOfAttendees: 6,
+    feePerAttendee: 4000,
+    groupDiscount: 10,
+}
 
+function calculateRegistrationTotal(numberOfAttendees, feePerAttendee, discountPercentage) {
+    let totalPrice = numberOfAttendees * feePerAttendee;;
 
+    if (numberOfAttendees >= 5){ 
+        totalPrice = totalPrice - ((discountPercentage / 100) * totalPrice);
+        return totalPrice;
+    }
+    return totalPrice;
+}
 
-
-
-
-
-
+console.log(calculateRegistrationTotal(registration.numberOfAttendees, registration.feePerAttendee, registration.groupDiscount));

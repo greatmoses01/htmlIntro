@@ -245,7 +245,7 @@ let registration = {
 }
 
 function calculateRegistrationTotal(numberOfAttendees, feePerAttendee, discountPercentage) {
-    let totalPrice = numberOfAttendees * feePerAttendee;;
+    let totalPrice = numberOfAttendees * feePerAttendee;
 
     if (numberOfAttendees >= 5){ 
         totalPrice = totalPrice - ((discountPercentage / 100) * totalPrice);
@@ -255,3 +255,71 @@ function calculateRegistrationTotal(numberOfAttendees, feePerAttendee, discountP
 }
 
 console.log(calculateRegistrationTotal(registration.numberOfAttendees, registration.feePerAttendee, registration.groupDiscount));
+
+
+
+//QUES 6: stationeryOrder
+let stationeryOrder={
+    schoolName: "greenfieldAcademy",
+    item: "exerciseBook",
+    quantity: 8,
+    pricePerNotebook: 1250,
+    deliveryCharge: 1500,
+}
+
+function calculateStationeryTotal(quantity, pricePerNotebook, deliveryCharge){
+    return (quantity * pricePerNotebook) + deliveryCharge;
+}
+console.log (calculateStationeryTotal(stationeryOrder.quantity, stationeryOrder.pricePerNotebook, stationeryOrder.deliveryCharge));
+
+
+
+//QUES 7: hotelBooking
+let hotelBooking= {
+    name: "daniel",
+    roomType: "standardRoom",
+    numberOfNights: 3,
+    pricePerNight: 18000,
+    serviceFee: 2500,
+}
+
+const calculateAccomodationCost = (numberOfNights, pricePerNight, serviceFee) => (pricePerNight * numberOfNights) + serviceFee;
+console.log (calculateAccomodationCost(hotelBooking.numberOfNights, hotelBooking.pricePerNight, hotelBooking.serviceFee));
+
+
+//QUES 8: electricityBill
+let electricityBill={
+    name: "esther",
+    unitsConsumed: 120,
+    standardRate: "65perUnits",
+    higherRate: "80perUnitAbove100",
+    meterServiceCharge: 1500,
+}
+
+function calculateElectricityBill(unitsConsumed, standardRate, higherRate, serviceCharge){
+    let energyCharge = 0;
+    if (unitsConsumed<=100){
+        unitsConsumed * standardRate;
+    }
+    else {
+        first100cost = 100 * standardRate;
+        remainingUnits = unitsConsumed - 100;
+        remainingCost = remainingUnits * higherRate;
+        energyCharge = first100cost + remainingCost; 
+    }
+    return energyCharge + serviceCharge;
+}
+
+console.log(calculateElectricityBill(electricityBill.unitsConsumed, electricityBill.standardRate, electricityBill.higherRate, electricityBill.serviceCharge));
+
+
+//QUES 9: employeeSales
+let employeeSales = {
+    name: "chika",
+    monthlySales: 350000,
+    monthlySalesTarget: 300000,
+    commissionIfTargetsIsMet: 5,
+    commissionIfTargetIsNotMet: 3,
+}
+
+const calculateSalesCommission = (monthlySales, monthlySalesTarget, commissionIfTargetsIsMet, commissionIfTargetIsNotMet) => ()

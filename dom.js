@@ -70,6 +70,9 @@ todoForm.addEventListener("submit", function (event) {
 // element.style is used to get or set inline CSS styles directly on a specific 
 // HTML element using JavaScript.
 
+// const myButton = document.querySelector("#submit-btn")
+//myButton.style.backgroundColor = "blue";
+//myButton.style.color = "white";
 
 // Classes
 
@@ -96,3 +99,9 @@ todoForm.addEventListener("submit", function (event) {
 
 // element.remove() is a DOM method used to completely delete an HTML element from
 //  the DOM and remove it from the web page.
+
+const hera = document.getElementById("hera");
+const paragraph = document.createElement("p");
+paragraph.textContent= "lorem ipsum gyuudg gygdu gyhsuyx"
+hera.append(paragraph);
+

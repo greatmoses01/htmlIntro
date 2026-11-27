@@ -322,4 +322,73 @@ let employeeSales = {
     commissionIfTargetIsNotMet: 3,
 }
 
-const calculateSalesCommission = (monthlySales, monthlySalesTarget, commissionIfTargetsIsMet, commissionIfTargetIsNotMet) => ()
+const calculateSalesCommission = (salesAmount, salesTarget, qualifyingRate, standardRate) => {
+  let commissionRate;
+  let targetStatus;
+  
+  if (salesAmount >= salesTarget) {
+    commissionRate = qualifyingRate;
+    targetStatus = "Target achieved";
+  } else {
+    commissionRate = standardRate;
+    targetStatus = "Target not achieved";
+  }
+  
+  const commissionEarned = salesAmount * (commissionRate / 100);
+  
+  console.log(`Sales target status: ${targetStatus}`);
+  console.log(`Commission rate applied: ${commissionRate}%`);
+  console.log(`Commission earned: ₦${commissionEarned.toLocaleString()}`);
+  
+  return commissionEarned;
+};
+
+calculateSalesCommission(
+  employeeSales.monthlySales,
+  employeeSales.monthlySalesTarget,
+  employeeSales.qualifyingRate,
+  employeeSales.standardRate
+);
+
+// QUES 10 : gymMembership
+
+let gymMembership = {
+  customerName: "Ibrahim",
+  membershipPlan: "Standard",
+  numberOfMonths: 6,
+  monthlyFee: 12000,
+  discountPercentage: 15,
+  registrationFee: 2000
+};
+
+function calculateMembershipPayment(numberOfMonths, monthlyFee, discountPercentage, registrationFee) {
+  const originalCost = numberOfMonths * monthlyFee;
+  
+  let discountAmount = 0;
+  let appliedDiscountPercent = 0;
+  let discountedCost = originalCost;
+
+  if (numberOfMonths >= 6) {
+    appliedDiscountPercent = discountPercentage;
+    discountAmount = originalCost * (discountPercentage / 100);
+    discountedCost = originalCost - discountAmount;
+  } else {
+    discountedCost = originalCost;
+  }
+
+  const finalPayment = discountedCost + registrationFee;
+
+  console.log(`Original membership cost: ₦${originalCost.toLocaleString()}`);
+  console.log(`Discount: ${appliedDiscountPercent}% (₦${discountAmount.toLocaleString()})`);
+  console.log(`Registration fee: ₦${registrationFee.toLocaleString()}`);
+  console.log(`Final payment: ₦${finalPayment.toLocaleString()}`);
+
+  return finalPayment;
+}
+
+calculateMembershipPayment(
+  gymMembership.numberOfMonths,
+  gymMembership.monthlyFee,
+  gymMembership.discountPercentage,
+  gymMembership.registrationFee
+);
